@@ -1,0 +1,87 @@
+/* better defaults */
+:root {
+  --border: 1px solid #d3d3d3;
+  --border-radius: 4px;
+  --margin: 0 0.5rem 1rem 0;
+  --padding: 0.5rem;
+}
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+}
+body {
+  padding: 1rem;
+}
+
+/* default styles for form elements */
+form > * {
+  display: block;
+  margin: var(--margin);
+}
+form > *:last-child {
+  margin-bottom: 0;
+}
+label {
+  line-height: 1;
+  margin: var(--margin);
+}
+button, select, textarea, input[type="text"], input[type="checkbox"] {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  line-height: 1;
+  padding: var(--padding);
+  width: 160px;
+}
+button {
+  background: #e7e7e7;
+  min-width: 80px;
+  width: auto;
+}
+button:hover {
+  background: #ddd;
+}
+button:active {
+  background: #bbb;
+}
+input[type="text"] {
+  cursor: text;
+}
+textarea {
+  cursor: text;
+  height: 100px;
+  resize: none;
+  width: 300px;
+}
+input[type="checkbox"] {
+  border-radius: 2px;
+  height: 1rem;
+  vertical-align: middle;
+  width: 1rem;
+}
+
+/* default styles for non-form elements */
+iframe {
+  border: var(--border);
+  height: 300px;
+  width: 100%;
+}
+
+/* CSS that is not general */
+.App-form {
+  background: #f7f7f7;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  margin: var(--margin);
+  padding: var(--padding);
+}

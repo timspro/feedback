@@ -1,0 +1,41 @@
+{
+  "name": "feedback",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8081",
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "npm-watch": "^0.6.0"
+  },
+  "scripts": {
+    "start": "npm-watch watched",
+    "start-simple": "DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start",
+    "watched": "concurrently \"npm run install-run-client\" \"npm run install-run-server\"",
+    "install-run-client": "npm install && npm run start-simple",
+    "install-run-server": "cd server && npm run start",
+    "test": "react-scripts test"
+  },
+  "watch": {
+    "watched": "package.json"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
