@@ -15,11 +15,11 @@
     "npm-watch": "^0.6.0"
   },
   "scripts": {
-    "start": "npm-watch watched",
+    "start": "npm-watch install-run",
     "start-simple": "nodemon --watch src src/run.js",
-    "watched": "npm install && npm run start-simple"
+    "install-run": "npm install && npm run start-simple"
   },
   "watch": {
-    "watched": "package.json"
+    "install-run": "package.json"
   }
 }
